@@ -8,7 +8,8 @@ import java.net.InetSocketAddress;
 public class A {
     public static void main(String[] args) throws IOException {
         
-        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        // HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress("192.168.1.4", 8000), 0);
         
     
         server.createContext("/", new MyHandler());
